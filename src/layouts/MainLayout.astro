@@ -13,5 +13,7 @@ const { title } = Astro.props;
     <title>{title}</title>
     <slot name="head" />
   </Fragment>
-  <slot />
+  <main class="text-center pt-8">
+    <slot />
+  </main>
 </BaseLayout>
