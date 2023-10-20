@@ -1,16 +1,23 @@
+---
+type Link = {
+    name: string,
+    link: string,
+}
+
+const links: Link[] = [
+    { name: "Home", link: "/" },
+    { name: "About", link: "/about" },
+    { name: "Contact", link: "/contact" },
+    { name: "Projects", link: "/projects" },
+]
+---
+
 <nav>
   <ul class="flex flex-wrap justify-center gap-2">
-    <li class="rounded-md px-2 py-1 text-lg bg-neutral-700">
-      <a href="/">Home</a>
-    </li>
-    <li class="rounded-md px-2 py-1 text-lg bg-neutral-700">
-      <a href="/about">About</a>
-    </li>
-    <li class="rounded-md px-2 py-1 text-lg bg-neutral-700">
-      <a href="/contact">Contact</a>
-    </li>
-    <li class="rounded-md px-2 py-1 text-lg bg-neutral-700">
-      <a href="/projects">Projects</a>
-    </li>
+    { links.map((l) =>
+      <li class="rounded-md px-2 py-1 text-lg bg-neutral-700">
+        <a href={`/${l.link}`}>l.name}</a>
+      </li>
+    )}
   </ul>
 </nav>
