@@ -4,14 +4,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 interface Props {
   title: string;
+  hideExt?: boolean;
 }
 
-const { title } = Astro.props as Props;
+const { title, hideExt } = Astro.props as Props;
 ---
 
 <BaseLayout title={title}>
   <Fragment slot="head">
-    <title>{title}</title>
+    <title>{title} {!hideExt && "· circus-real"}</title>
     <slot name="head" />
   </Fragment>
   <NavBar />
