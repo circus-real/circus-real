@@ -4,12 +4,10 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 <MainLayout title="circus-real">
   <h1 class="text-6xl my-8">404: Page not found</h1>
-  <button
-    onclick="
+  <section class="flex gap-2 justify-center">
+    <button onclick="
     history.back()
-    "
-    class="mt-6 px-4 pb-3 pt-2.5 bg-neutral-700 rounded-xl"
-  >
-    Previous page
-  </button>
+    " class="btn"> Previous page</button>
+    <a href="/" class="btn">Homepage</a>
+  </section>
 </MainLayout>
