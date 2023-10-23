@@ -1,23 +1,29 @@
 ---
+import { Icon } from "astro-icon";
+
 type Link = {
+  alt: string;
   name: string;
   link: string;
 };
 
 const links: Link[] = [
-  { name: "Home", link: "/" },
-  { name: "About", link: "/about" },
-  { name: "Contact", link: "/contact" },
-  { name: "Projects", link: "/projects" },
+  { alt: "Home", link: "/", name: "ant-design:home-filled" },
+  { alt: "About", link: "/about", name: "mdi:about" },
+  { alt: "Contact", link: "/contact", name: "mdi:contact" },
+  { alt: "Projects", link: "/projects", name: "ph:code-bold" },
 ];
 ---
 
 <nav>
-  <ul class="flex flex-wrap justify-center gap-2">
+  <ul class="flex flex-wrap justify-center gap-4">
     {
-      links.map((l) => (
+      links.map(({ alt, link, name }) => (
         <li class="rounded-md px-2 py-1 text-lg bg-neutral-700">
-          <a href={l.link}>{l.name}</a>
+          <a href={link} class="flex flex-col justify-center gap-1">
+            <h3>{alt}</h3>
+            <Icon {name} {alt} height="50" aria-label={alt} />
+          </a>
         </li>
       ))
     }
