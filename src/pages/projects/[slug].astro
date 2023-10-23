@@ -1,0 +1,20 @@
+---
+import { getCollection, getEntry } from "astro:content";
+import MainLayout from "../../layouts/MainLayout.astro";
+
+export async function getStaticPaths() {
+  return (await getCollection("projects")!).map((p) => ({
+    params: {
+      slug: p.slug,
+    },
+  }));
+}
+
+const { slug } = Astro.params! as { slug: string };
+const entry = await getEntry("projects", slug!);
+const { Content } = await entry!.render();
+---
+
+<MainLayout title={entry!.data.name}>
+  <Content />
+</MainLayout>

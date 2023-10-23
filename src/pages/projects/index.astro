@@ -11,7 +11,9 @@ const projects = await getCollection("projects");
   <article class="grid xl:grid-cols-3 content-center">
     {
       projects.length > 0 &&
-        projects.map((proj) => <ProjectCard data={proj.data} id={proj.id} />)
+        projects.map((proj) => (
+          <ProjectCard data={proj.data} slug={proj.slug} />
+        ))
     }
   </article>
 </MainLayout>
