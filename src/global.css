@@ -20,6 +20,6 @@
 
 @layer components {
   .btn {
-    @apply px-1 border-2 rounded-lg bg-neutral-600 border-neutral-400;
+    @apply px-4 pb-2 pt-1.5 rounded-lg bg-neutral-600;
   }
 }
