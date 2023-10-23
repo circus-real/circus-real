@@ -10,7 +10,7 @@ interface Props {
 const { title, hideExt } = Astro.props as Props;
 ---
 
-<BaseLayout title={title}>
+<BaseLayout>
   <Fragment slot="head">
     <title>{title} {!hideExt && "· circus-real"}</title>
     <slot name="head" />

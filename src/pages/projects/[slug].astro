@@ -10,11 +10,11 @@ export async function getStaticPaths() {
   }));
 }
 
-const { slug } = Astro.params! as { slug: string };
-const entry = await getEntry("projects", slug!);
+const { slug } = Astro.params as { slug: string };
+const entry = (await getEntry("projects", slug))!;
 const { Content } = await entry!.render();
 ---
 
-<MainLayout title={entry!.data.name}>
+<MainLayout title={entry.data.name}>
   <Content />
 </MainLayout>
