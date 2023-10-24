@@ -4,6 +4,7 @@ description: "Colour guessing game that tests how well you can distinguish betwe
 url: "https://colour-guess-game.netlify.app/"
 github: "colour-game"
 techStack: ["SolidJS", "TailwindCSS"]
+frame: { height: 600 }
 ---
 
 colour game
