@@ -19,7 +19,7 @@ const links: Link[] = [
   <ul class="flex flex-wrap justify-center gap-4">
     {
       links.map(({ alt, link, name }) => (
-        <li class="rounded-md px-2 py-1 text-lg bg-neutral-700">
+        <li class="rounded-md px-2 pt-1 pb-2 text-lg bg-neutral-700">
           <a href={link} class="flex flex-col justify-center gap-1">
             <h3>{alt}</h3>
             <Icon {name} {alt} height="50" aria-label={alt} />
