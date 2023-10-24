@@ -7,9 +7,11 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "perf": "npx unlighthouse --site circus-real.netlify.app --desktop"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.0.2",
     "@astrojs/tailwind": "^5.0.2",
     "astro": "^3.3.2",
     "astro-icon": "^0.8.1",
