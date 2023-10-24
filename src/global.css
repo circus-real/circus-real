@@ -22,4 +22,7 @@
   .btn {
     @apply px-4 pb-2 pt-1.5 rounded-lg bg-neutral-600;
   }
+  .highlight {
+    @apply font-semibold text-blue-500;
+  }
 }

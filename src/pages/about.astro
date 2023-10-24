@@ -1,22 +1,23 @@
 ---
-import { Image } from "astro:assets";
+import { Picture } from "astro:assets";
 import MainLayout from "../layouts/MainLayout.astro";
 import Headshot from "../assets/headshot.jpg";
 ---
 
-<MainLayout title="About">
+<MainLayout title="About me">
   <h1 class="text-4xl">About Me</h1>
   <section class="mt-4 flex justify-center items-center gap-4">
-    <Image
+    <Picture
       src={Headshot}
-      alt="Picture containing my face"
-      class="rounded-3xl h-48 aspect-video"
-      format="webp"
+      alt="Picture of me"
+      class="rounded-3xl aspect-video hidden sm:block max-h-36 lg:max-h-full"
+      formats={["avif", "webp", "png"]}
     />
     <p class="max-w-prose">
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi eius
-      eligendi facilis quas? Ratione repellendus ipsum eos ex explicabo quas
-      dolorum laudantium recusandae beatae ipsa.
+      Hi, I'm <strong class="highlight">circus-real</strong>! I'm a software
+      engineer based in the UK. I'm currently hoping to get into the web dev
+      industry, but I'm also interested in backend development and other areas
+      of software engineering.
     </p>
   </section>
 </MainLayout>
