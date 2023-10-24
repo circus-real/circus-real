@@ -1,0 +1,22 @@
+---
+interface Props {
+  name: string;
+  url: string;
+  height?: number;
+}
+
+const { name, url, height = 400 } = Astro.props as Props;
+---
+
+<section class="flex flex-col justify-center mt-4 gap-4">
+  <h3 id="iframe-preview" class="font-semibold text-2xl">Preview for {name}</h3>
+  <iframe
+    src={url}
+    aria-labelledby="iframe-preview"
+    {height}
+    class="mx-24 rounded-xl bg-neutral-300"
+    loading="lazy"
+    title={name}
+  >
+  </iframe>
+</section>

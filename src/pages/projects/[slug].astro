@@ -1,6 +1,7 @@
 ---
 import { getCollection, getEntry } from "astro:content";
 import MainLayout from "../../layouts/MainLayout.astro";
+import ProjectPreview from "../../components/ProjectPreview.astro";
 
 export async function getStaticPaths() {
   return (await getCollection("projects")!).map((p) => ({
@@ -17,4 +18,9 @@ const { Content } = await entry!.render();
 
 <MainLayout title={entry.data.name}>
   <Content />
+  {
+    !entry.data.frame?.skip && (
+      <ProjectPreview {...entry.data} {...entry.data.frame} />
+    )
+  }
 </MainLayout>
