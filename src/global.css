@@ -8,21 +8,21 @@
 
 @layer base {
   body {
-    @apply font-sans antialiased p-4 bg-neutral-800 text-neutral-300 min-h-screen;
+    @apply font-sans antialiased p-4 bg-background-950 text-text-100 min-h-screen;
   }
   code {
-    @apply font-mono bg-neutral-700 rounded-md px-1 py-0.5;
+    @apply font-mono bg-secondary-900 rounded-md px-1 py-0.5;
   }
   a {
-    @apply text-blue-500 hover:text-blue-600 font-semibold;
+    @apply text-text-300 hover:text-accent-400 font-semibold;
   }
 }
 
 @layer components {
   .btn {
-    @apply px-4 pb-2 pt-1.5 rounded-lg bg-neutral-600;
+    @apply px-4 pb-2 pt-1.5 rounded-lg bg-secondary-900;
   }
   .highlight {
-    @apply font-semibold text-blue-500;
+    @apply font-semibold text-text-300;
   }
 }
