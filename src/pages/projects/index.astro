@@ -9,7 +9,7 @@ const projects = await getCollection("projects");
 <MainLayout title="Projects">
   <h1 class="text-4xl">My Projects</h1>
   <article>
-    <section class="grid xl:grid-cols-3 content-center mt-4">
+    <section class="flex flex-wrap justify-center items-center mt-4">
       {
         projects.length > 0 &&
           projects.map((proj) => (
