@@ -17,10 +17,12 @@ const { Content } = await entry!.render();
 ---
 
 <MainLayout title={entry.data.name}>
-  <Content />
-  {
-    !entry.data.frame?.skip && (
-      <ProjectPreview {...entry.data} {...entry.data.frame} />
-    )
-  }
+  <article>
+    <Content />
+    {
+      !entry.data.frame?.skip && (
+        <ProjectPreview {...entry.data} {...entry.data.frame} />
+      )
+    }
+  </article>
 </MainLayout>
