@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  font-size: 20px;
+  font-size: calc(1rem + ((1vw - 7.68px) * 0.6944));
 }
 
 @layer base {
@@ -16,6 +16,16 @@
   a {
     @apply text-text-300 hover:text-accent-400 font-semibold;
   }
+  p {
+    @apply max-w-prose;
+  }
+  h1 {
+    @apply text-4xl font-bold;
+  }
+  h2,
+  h3 {
+    @apply text-2xl font-semibold;
+  }
 }
 
 @layer components {
@@ -23,6 +33,9 @@
     @apply px-4 pb-2 pt-1.5 rounded-lg bg-secondary-900;
   }
   .highlight {
-    @apply font-semibold text-text-300;
+    @apply font-semibold text-accent-400 shadow-lg bg-accent-700/30 shadow-accent-700/30 rounded-md px-1;
+  }
+  .wide {
+    @apply max-w-[100ch];
   }
 }

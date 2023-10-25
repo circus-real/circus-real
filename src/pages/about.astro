@@ -1,23 +1,77 @@
 ---
 import { Picture } from "astro:assets";
 import MainLayout from "../layouts/MainLayout.astro";
-import Headshot from "../assets/headshot.jpg";
 ---
 
 <MainLayout title="About me">
-  <h1 class="text-4xl">About Me</h1>
-  <section class="mt-4 flex justify-center items-center gap-4">
-    <Picture
-      src={Headshot}
-      alt="Picture of me"
-      class="rounded-3xl hidden sm:block max-h-36 lg:max-h-full"
-      formats={["avif", "webp", "png"]}
-    />
-    <p class="max-w-prose">
-      Hi, I'm <strong class="highlight">circus-real</strong>! I'm a software
-      engineer based in the UK. I'm currently hoping to get into the web dev
-      industry, but I'm also interested in backend development and other areas
-      of software engineering.
+  <h1>About Me</h1>
+  <article class="my-6 flex flex-col justify-center items-center gap-16">
+    <section class="flex justify-center items-center gap-4">
+      <Picture
+        src={import("../assets/headshot.jpg")}
+        alt="Picture of me"
+        class="rounded-3xl hidden sm:block max-h-36 lg:max-h-full shadow-2xl shadow-accent-700"
+        formats={["avif", "webp", "png"]}
+      />
+      <p>
+        Hello, I'm <strong class="highlight">circus-real</strong>, a passionate
+        individual exploring the world of web development. While I might not
+        have an extensive professional background (yet!), I'm enthusiastic about
+        coding and always eager to learn and grow. I'm excited to share a bit
+        about who I am and what I enjoy.
+      </p>
+    </section>
+    <section class="flex justify-center items-center gap-8">
+      <p>
+        Outside of the digital realm, you'll often find me engrossed in a
+        variety of board games, or playing ping pong or badminton. These hobbies
+        bring balance to my life and keep me refreshed for my coding adventures.
+      </p>
+      <h2 class="highlight">My Interests</h2>
+    </section>
+    <section class="flex justify-center items-center gap-24">
+      <h2 class="highlight">My Skills</h2>
+      <section class="flex flex-col justify-center items-center gap-4">
+        <p class="wide">
+          I'm currently learning and becoming proficient in a few key
+          technologies:
+        </p>
+        <ul class="flex flex-col gap-4">
+          <li class="wide text-left">
+            <strong class="highlight">SolidJS</strong> and <strong
+              class="highlight">Astro</strong
+            >: These modern JavaScript frameworks have captured my attention
+            with their performance and elegant approach to web development.
+          </li>
+          <li class="wide text-left">
+            <strong class="highlight">Tailwind</strong>: I love the simplicity
+            and efficiency of Tailwind CSS in creating clean, responsive user
+            interfaces.
+          </li>
+          <li class="wide text-left">
+            <strong class="highlight">Git</strong>: Version control is the
+            backbone of collaborative development, and Git is my go-to tool.
+          </li>
+          <li class="wide text-left">
+            <strong class="highlight">Python</strong>: My coding journey began
+            with Python, and it remains close to my heart as a versatile and
+            beginner-friendly language.
+          </li>
+        </ul>
+        <p class="wide">
+          I'm on a path of continuous learning, always seeking to expand my
+          skills and knowledge.
+        </p>
+      </section>
+    </section>
+    <p class="wide">
+      While I may not have a lengthy resume to show, I believe in the power of
+      ambition and dedication. I'm excited about the possibilities in web
+      development and am eager to contribute to the ever-evolving digital
+      landscape. If you'd like to connect, discuss projects, or just have a chat
+      about web development or any shared interests, please feel free to
+      <a href="/contact"> get in touch</a>.
     </p>
-  </section>
+    <h2 class="highlight">Let's build the web together!</h2>
+  </article>
 </MainLayout>
