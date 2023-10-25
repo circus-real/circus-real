@@ -8,12 +8,14 @@ const projects = await getCollection("projects");
 
 <MainLayout title="Projects">
   <h1 class="text-4xl">My Projects</h1>
-  <article class="grid xl:grid-cols-3 content-center mt-4">
-    {
-      projects.length > 0 &&
-        projects.map((proj) => (
-          <ProjectCard data={proj.data} slug={proj.slug} />
-        ))
-    }
+  <article>
+    <section class="grid xl:grid-cols-3 content-center mt-4">
+      {
+        projects.length > 0 &&
+          projects.map((proj) => (
+            <ProjectCard data={proj.data} slug={proj.slug} />
+          ))
+      }
+    </section>
   </article>
 </MainLayout>
