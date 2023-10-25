@@ -3,10 +3,28 @@ import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <MainLayout title="Contact">
-  <h1 class="text-4xl">Contact</h1>
-  <h2 class="mt-6 mb-2 text-2xl font-semibold">Connect with me on:</h2>
-  <ul>
-    <li>Discord: <code class="highlight">circus_real</code></li>
-    <li>GitHub: <code class="highlight">circus-real</code></li>
-  </ul>
+  <h1>Contact Me</h1>
+  <article class="flex flex-col justify-center items-center gap-4">
+    <p>
+      Feel free to reach out to me if you have any questions, collaboration
+      ideas, or just want to chat. I'm available on Discord and GitHub.
+    </p>
+    <section class="flex flex-col gap-2">
+      <p>Discord: <strong class="highlight">circus_real</strong></p>
+      <p>
+        GitHub: <a class="highlight" href="https://github.com/circus-real">
+          circus-real
+        </a>
+      </p>
+    </section>
+    <p class="wide">
+      You can contact me through Discord to have a real-time conversation or
+      check out my GitHub profile to explore my projects and contributions.
+      Whether you're a fellow developer, potential client, or just someone
+      interested in web development or shared interests like board games, ping
+      pong, or badminton, I'm here to connect with you. Feel free to send a
+      direct message on Discord, follow me on GitHub, or explore my projects.
+    </p>
+    <strong class="highlight">Let's stay in touch!</strong>
+  </article>
 </MainLayout>

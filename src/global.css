@@ -28,6 +28,9 @@
   h3 {
     @apply font-semibold text-2xl;
   }
+  article {
+    @apply my-6;
+  }
 }
 
 @layer components {
