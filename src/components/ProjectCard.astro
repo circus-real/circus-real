@@ -25,4 +25,13 @@ const { slug, data } = Astro.props as Props;
       Source code
     </a> · <a target="_blank" href={data.url}>Live site</a>
   </section>
+  <ul class="flex flex-wrap gap-2 justify-center items-center">
+    {
+      data.techStack.map((tech) => (
+        <li class="shadow-md shadow-background-700 bg-background-700 px-2 pb-1 pt-0.5 rounded-lg">
+          {tech}
+        </li>
+      ))
+    }
+  </ul>
 </section>
