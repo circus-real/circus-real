@@ -8,23 +8,25 @@
 
 @layer base {
   body {
-    @apply font-sans antialiased p-4 bg-background-950 text-text-100 min-h-screen;
+    @apply font-sans antialiased;
+    @apply p-4 bg-background-950 text-text-100 min-h-screen;
   }
   code {
-    @apply font-mono bg-secondary-900 rounded-md px-1 py-0.5;
+    @apply font-mono;
+    @apply bg-secondary-900 rounded-md px-1 py-0.5;
   }
   a {
-    @apply text-text-300 hover:text-accent-400 font-semibold;
+    @apply font-semibold text-text-300 hover:text-accent-400;
   }
   p {
     @apply max-w-prose;
   }
   h1 {
-    @apply text-4xl font-bold;
+    @apply font-bold text-4xl;
   }
   h2,
   h3 {
-    @apply text-2xl font-semibold;
+    @apply font-semibold text-2xl;
   }
 }
 
@@ -33,7 +35,8 @@
     @apply px-4 pb-2 pt-1.5 rounded-lg bg-secondary-900;
   }
   .highlight {
-    @apply font-semibold text-accent-400 shadow-lg bg-accent-700/30 shadow-accent-700/30 rounded-md px-1;
+    @apply font-semibold text-accent-400;
+    @apply shadow-lg bg-accent-700/30 shadow-accent-700/30 rounded-md px-1;
   }
   .wide {
     @apply max-w-[100ch];
