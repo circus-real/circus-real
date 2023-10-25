@@ -1,10 +1,39 @@
 ---
+import { getCollection } from "astro:content";
 import MainLayout from "../layouts/MainLayout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+
+const featProjects = await getCollection(
+  "projects",
+  ({ data }) => data.featured
+);
+
+const skills = [
+  "HTML",
+  "TailwindCSS",
+  "Typescript",
+  "Git and Github",
+  "SolidJS",
+  "Astro",
+];
 ---
 
 <MainLayout title="Home">
-  <h1 class="text-4xl">circus-real</h1>
-  <article>
-    <p>content goes here...</p>
+  <h1 class="text-4xl">circus-real's portfolio</h1>
+  <article class="gap-4">
+    <h2 class="highlight">Featured projects</h2>
+    <section class="flex">
+      {featProjects.map(({ slug, data }) => <ProjectCard {slug} {data} />)}
+    </section>
+    <h2 class="highlight">Key skills</h2>
+    <ul class="grid grid-cols-2 gap-2">
+      {skills.map((skill) => <li>{skill}</li>)}
+    </ul>
+    <p class="wide">
+      Have a look around and, if you like what you see, feel free to <a
+        href="/contact"
+        >contact me
+      </a> on Discord or Github.
+    </p>
   </article>
 </MainLayout>
