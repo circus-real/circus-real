@@ -1,6 +1,6 @@
 ---
 name: "Colour guessing game"
-description: "Colour guessing game that tests how well you can distinguish between colours."
+description: "How well can you tell colours apart?"
 url: "https://colour-guess-game.netlify.app/"
 github: "colour-game"
 techStack: ["SolidJS", "TailwindCSS"]

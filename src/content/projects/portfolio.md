@@ -1,6 +1,6 @@
 ---
 name: "Portfolio"
-description: "My developer portfolio"
+description: "This website!"
 url: "https://circus-real.netlify.app/"
 github: "circus-real"
 techStack: ["Astro", "TailwindCSS"]

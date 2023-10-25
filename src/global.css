@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  font-size: calc(1rem + ((1vw - 7.68px) * 0.6944));
+  font-size: clamp(16px, calc(1rem + ((1vw - 7.68px) * 0.6944)), 32px);
 }
 
 @layer base {
@@ -40,6 +40,9 @@
   .highlight {
     @apply font-semibold text-accent-400;
     @apply shadow-lg bg-accent-700/30 shadow-accent-700/30 rounded-md px-1;
+  }
+  .semiwide {
+    @apply max-w-[80ch];
   }
   .wide {
     @apply max-w-[100ch];
