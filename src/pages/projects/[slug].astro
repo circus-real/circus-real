@@ -17,12 +17,15 @@ const { Content } = await entry!.render();
 ---
 
 <MainLayout title={entry.data.name}>
-  <article>
+  <article class="gap-4">
+    <h1>{entry.data.name}</h1>
+    {!entry.data.frame?.skip && <a href="#iframe-preview">Skip to preview</a>}
     <Content />
     {
       !entry.data.frame?.skip && (
         <ProjectPreview {...entry.data} {...entry.data.frame} />
       )
     }
+    {!entry.data.frame?.skip && <a href="#">Back to top</a>}
   </article>
 </MainLayout>
