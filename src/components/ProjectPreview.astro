@@ -9,12 +9,12 @@ const { name, url, height = 400 } = Astro.props as Props;
 ---
 
 <section class="flex flex-col justify-center mt-4 gap-4">
-  <h3 id="iframe-preview" class="font-semibold text-2xl">Preview for {name}</h3>
+  <h2 id="iframe-preview">Preview for {name}</h2>
   <iframe
     src={url}
     aria-labelledby="iframe-preview"
     {height}
-    class="mx-4 lg:mx-24 rounded-xl bg-text-300"
+    class="mx-4 sm:mx-8 md:mx-16 lg:mx-24 rounded-xl bg-text-300"
     loading="lazy"
     title={name}
   >
