@@ -6,11 +6,11 @@ import MainLayout from "../layouts/MainLayout.astro";
 <MainLayout title="About me">
   <h1>About Me</h1>
   <article class="gap-16">
-    <section class="flex justify-center items-center gap-4">
+    <section class="sm:flex justify-center items-center gap-4">
       <Picture
         src={import("../assets/headshot.jpg")}
         alt="Picture of me"
-        class="rounded-3xl hidden sm:block max-h-36 lg:max-h-full shadow-2xl shadow-accent-700"
+        class="mb-4 sm:mb-0 rounded-3xl max-h-36 lg:max-h-full shadow-2xl shadow-accent-700"
         formats={["avif", "webp", "png"]}
       />
       <p>
