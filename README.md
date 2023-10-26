@@ -2,7 +2,7 @@
 
 _Like a circus, but real. - Copilot_
 
-Portfolio code license: MIT
+Portfolio license: MIT
 
 - 🔭 I’m currently working on a [colour guessing game](https://colour-guess-game.netlify.app/).
 - 🌱 I’m currently learning [Astro](https://astro.build/) and [SolidJS](https://solidjs.com/).
