@@ -10,6 +10,6 @@ export default defineConfig({
     tailwind({
       applyBaseStyles: false,
     }),
-    sitemap(),
+    sitemap({ ignore: ["/contact-success"] }),
   ],
 });
