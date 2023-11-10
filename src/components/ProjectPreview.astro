@@ -2,10 +2,10 @@
 interface Props {
   name: string;
   url: string;
-  frame?: {
-    height?: number;
-    width?: number;
-  };
+  frame: {
+    height: number;
+    width: number;
+  } | null;
 }
 
 const { name, url, frame } = Astro.props as Props;
@@ -18,7 +18,7 @@ const { name, url, frame } = Astro.props as Props;
     aria-labelledby="iframe-preview"
     height={frame?.height ?? 600}
     width={frame?.width ?? 800}
-    class="mx-4 sm:mx-8 md:mx-16 lg:mx-24 rounded-xl bg-text-300"
+    class="mx-4 sm:mx-8 md:mx-16 lg:mx-24 rounded-xl bg-primary-700"
     loading="lazy"
     title={name}
   >

@@ -12,10 +12,11 @@ export const collections = {
       featured: z.boolean().optional(),
       frame: z
         .object({
-          skip: z.boolean().optional(),
-          height: z.number().optional(),
+          width: z.number().default(600),
+          height: z.number().default(800),
         })
-        .optional(),
+        .or(z.null())
+        .default(null),
     }),
   }),
 };
