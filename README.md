@@ -9,6 +9,6 @@ Portfolio license: MIT
 - 📫 How to reach me: create an issue on one of my [repos](https://github.com/circus-real?tab=repositories), reach out via one of the following:
   - Discord: `circus_real`
   - [Email](mailto:circus.real.dev@gmail.com)
-- 💼 Check out my [portfolio](https://circus-real.netlify.app).
+- 💼 Check out my [portfolio](https://circus-real.vercel.app).
 
 [^1]: made by [yuckdevchan](https://github.com/yuckdevchan).
