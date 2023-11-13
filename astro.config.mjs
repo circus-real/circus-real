@@ -5,11 +5,11 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://circus-real.netlify.app",
+  site: "https://circus-real.vercel.app",
   integrations: [
     tailwind({
       applyBaseStyles: false,
     }),
-    sitemap({ ignore: ["/contact-success"] }),
+    sitemap(),
   ],
 });
