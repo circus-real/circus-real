@@ -8,7 +8,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "perf": "npx unlighthouse --site circus-real.netlify.app --desktop --no-cache"
+    "perf": "npx unlighthouse --site circus-real.vercel.app --desktop --no-cache"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.0.2",
