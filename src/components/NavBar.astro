@@ -14,6 +14,7 @@ const links: Link[] = [
   { alt: "Contact", link: "/contact", name: "fa-solid:paper-plane" },
   { alt: "Hire Me", link: "/hire-me", name: "ic:outline-work" },
 ];
+const path: string = new URL(Astro.request.url).pathname;
 ---
 
 <nav>
@@ -21,7 +22,11 @@ const links: Link[] = [
     {
       links.map(({ alt, link, name }) => (
         <li class="rounded-md px-2 pt-1 pb-2 text-lg bg-secondary-900">
-          <a href={link} class="flex flex-col justify-center gap-1">
+          <a
+            href={link}
+            class="flex flex-col justify-center gap-1"
+            class:list={{ "text-accent-400": path === link }}
+          >
             <h3>{alt}</h3>
             <Icon {name} {alt} height="50" aria-label={alt} />
           </a>
