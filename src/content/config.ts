@@ -9,7 +9,7 @@ export const collections = {
       url: z.string().url(),
       github: z.string(),
       techStack: z.array(z.string()),
-      featured: z.boolean().optional(),
+      featured: z.boolean().default(false),
       frame: z
         .object({
           width: z.number().default(600),
