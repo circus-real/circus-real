@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  font-size: clamp(16px, calc(1rem + ((1vw - 7.68px) * 0.6944)), 32px);
+  font-size: clamp(16px, calc(0.9rem + ((1vw - 7.68px) * 0.6944)), 32px);
 }
 
 @layer base {
