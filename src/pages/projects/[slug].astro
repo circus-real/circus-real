@@ -14,17 +14,21 @@ export async function getStaticPaths() {
 const { slug } = Astro.params as { slug: string };
 const entry = (await getEntry("projects", slug))!;
 const { Content } = await entry!.render();
+
+const hasFrame: boolean = entry.data.frame !== null;
 ---
 
 <MainLayout title={entry.data.name}>
   <article class="gap-4">
-    <h1>{entry.data.name}</h1>
-    {!entry.data.frame && <a href="#iframe-preview">Skip to preview</a>}
+    <h1 id="title">{entry.data.name}</h1>
+    {hasFrame && <a href="#iframe-preview">Skip to preview</a>}
     <Content />
     {
-      !entry.data.frame && (
-        <ProjectPreview {...entry.data} {...entry.data.frame} />
-        <a href="#">Back to top</a>
+      hasFrame && (
+        <>
+          <ProjectPreview {...entry.data} {...entry.data.frame!} />
+          <a href="#title">Back to top</a>
+        </>
       )
     }
   </article>

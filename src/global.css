@@ -4,6 +4,7 @@
 
 :root {
   font-size: clamp(16px, calc(0.9rem + ((1vw - 7.68px) * 0.6944)), 32px);
+  color-scheme: dark;
 }
 
 @layer base {

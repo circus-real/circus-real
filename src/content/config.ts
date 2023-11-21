@@ -16,7 +16,7 @@ export const collections = {
           height: z.number().default(800),
         })
         .or(z.null())
-        .default(null),
+        .default({ width: 600, height: 800 }),
     }),
   }),
 };
