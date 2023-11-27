@@ -10,11 +10,12 @@
     "astro": "astro",
     "perf": "npx unlighthouse --site circus-real.vercel.app --desktop --no-cache"
   },
-  "dependencies": {
+  "devDependencies": {
     "@astrojs/sitemap": "^3.0.2",
     "@astrojs/tailwind": "^5.0.2",
     "astro": "^3.3.2",
     "astro-icon": "^0.8.1",
-    "tailwindcss": "^3.3.3"
+    "tailwindcss": "^3.3.3",
+    "unlighthouse": "^0.10.4"
   }
 }
