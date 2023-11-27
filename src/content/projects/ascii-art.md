@@ -6,4 +6,4 @@ github: "ascii-art"
 techStack: ["Vanilla JS"]
 ---
 
-ascii art
+# ascii art

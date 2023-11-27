@@ -4,7 +4,7 @@ import MainLayout from "../../layouts/MainLayout.astro";
 import ProjectPreview from "../../components/ProjectPreview.astro";
 
 export async function getStaticPaths() {
-  return (await getCollection("projects")!).map((p) => ({
+  return (await getCollection("projects")).map((p) => ({
     params: {
       slug: p.slug,
     },
@@ -20,7 +20,6 @@ const hasFrame: boolean = entry.data.frame !== null;
 
 <MainLayout title={entry.data.name}>
   <article class="gap-4">
-    <h1 id="title">{entry.data.name}</h1>
     {hasFrame && <a href="#iframe-preview">Skip to preview</a>}
     <Content />
     {

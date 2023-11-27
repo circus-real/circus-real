@@ -6,4 +6,4 @@ github: "solid-todo"
 techStack: ["SolidJS", "TailwindCSS", "Firebase"]
 ---
 
-todo list
+# todo list
